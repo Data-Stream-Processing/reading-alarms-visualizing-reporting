@@ -32,7 +32,7 @@ def update(frame, alert_queue, alerts, ax):
 
     ax.clear()
     timestamps = [alert.timestamp for alert in alerts]
-    values = [alert.card_id for alert in alerts]  # Assuming card_id is representative of transaction value for visualization
+    values = [alert.card_id for alert in alerts]
     if timestamps:
         ax.plot(timestamps, values, marker='o')
         ax.set_xlabel('Time')
